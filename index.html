@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RANAILÉ | Beauty Booking</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f4eee5;color:#211e1b}
+header{display:flex;justify-content:space-between;align-items:center;padding:22px 7%;background:#f4eee5}
+.logo{font-family:Georgia,serif;font-size:30px;letter-spacing:4px;font-weight:bold}
+nav a{color:#211e1b;text-decoration:none;margin-left:22px;font-size:14px}
+.hero{padding:95px 8%;min-height:480px;background:linear-gradient(110deg,#e8ddce,#cfc0ad);display:flex;align-items:center}
+.hero-content{max-width:620px}
+.eyebrow{letter-spacing:4px;font-size:12px;margin-bottom:24px}
+h1{font-family:Georgia,serif;font-size:clamp(42px,7vw,72px);line-height:1.08;font-weight:normal;margin-bottom:24px}
+.hero p{font-size:17px;line-height:1.8;max-width:470px;margin-bottom:30px}
+.btn{display:inline-block;background:#211e1b;color:white;text-decoration:none;padding:16px 28px;font-size:13px;letter-spacing:1px}
+section{padding:75px 8%}
+.section-title{text-align:center;font-family:Georgia,serif;font-size:38px;font-weight:normal;margin-bottom:15px}
+.subtitle{text-align:center;color:#777;margin-bottom:40px}
+.search{display:flex;gap:10px;max-width:650px;margin:30px auto}
+.search input{flex:1;min-width:0;padding:16px;border:1px solid #c9bba9;background:#fff}
+.search button{background:#211e1b;color:white;border:0;padding:15px 22px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.feature{background:#fff;padding:30px 24px;text-align:center}
+.feature h3{font-family:Georgia,serif;font-size:23px;margin:15px 0}
+.feature p{color:#777;line-height:1.7;font-size:14px}
+.join{text-align:center;background:#29241f;color:#f4eee5;padding:75px 8%}
+.join h2{font-family:Georgia,serif;font-size:40px;font-weight:normal;margin-bottom:18px}
+.join p{margin-bottom:28px;line-height:1.7}
+.join .btn{background:#f4eee5;color:#211e1b}
+footer{text-align:center;padding:30px;font-size:12px;color:#777}
+@media(max-width:650px){
+header{padding:18px 5%}
+.logo{font-size:23px}
+nav a{margin-left:10px;font-size:12px}
+.hero{padding:75px 7%;min-height:400px}
+.features{grid-template-columns:1fr}
+section{padding:60px 7%}
+.search{flex-wrap:wrap}
+.search input{width:100%;flex-basis:100%}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">RANAILÉ</div>
+<nav>
+<a href="#accueil">Accueil</a>
+<a href="#decouvrir">Découvrir</a>
+<a href="#pro">Professionnelles</a>
+</nav>
+</header>
+
+<main>
+<div class="hero" id="accueil">
+<div class="hero-content">
+<div class="eyebrow">BEAUTY • STYLE • BOOKING</div>
+<h1>La beauté<br>au bout des doigts.</h1>
+<p>Découvrez les meilleures ongleristes près de chez vous et réservez votre prochain rendez-vous en toute simplicité.</p>
+<a class="btn" href="#pro">DÉCOUVRIR LES ONG LERISTES</a>
+</div>
+</div>
+
+<section id="decouvrir">
+<h2 class="section-title">Votre beauté, notre passion.</h2>
+<p class="subtitle">L'univers de la beauté des ongles, partout en Algérie.</p>
+<div class="search">
+<input id="city" placeholder="Entrez votre ville...">
+<button onclick="searchCity()">RECHERCHER</button>
+</div>
+<div class="features">
+<div class="feature">
+<h3>Découvrez</h3>
+<p>Explorez les profils et les réalisations des ongleristes.</p>
+</div>
+<div class="feature">
+<h3>Choisissez</h3>
+<p>Comparez les prestations et trouvez votre professionnelle.</p>
+</div>
+<div class="feature">
+<h3>Réservez</h3>
+<p>Envoyez votre demande de rendez-vous simplement.</p>
+</div>
+</div>
+</section>
+
+<section class="join" id="pro">
+<h2>Vous êtes ongleriste ?</h2>
+<p>Faites découvrir votre talent, présentez vos créations<br>et développez votre clientèle avec RANAILÉ.</p>
+<a class="btn" href="mailto:contact@ranaille.com">REJOINDRE RANAILÉ</a>
+</section>
+</main>
+
+<footer>© 2026 RANAILÉ — BEAUTY BOOKING IN ALGERIA</footer>
+
+<script>
+function searchCity(){
+const city=document.getElementById('city').value.trim();
+if(!city){alert('Veuillez entrer votre ville.');return;}
+alert('Bientôt, découvrez les ongleristes à '+city+' !');
+}
+</script>
+</body>
+</html>
